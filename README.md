@@ -1,2 +1,2 @@
 # SpeechToText
-IDIOM Peech To Text
+IDIOM Sunda Speech To Text
