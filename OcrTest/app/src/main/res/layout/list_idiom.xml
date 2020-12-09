@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingRight="@dimen/_30sdp"
+    android:id="@+id/parent_list">
+    <TextView
+        android:id="@+id/idiom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kontol"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"/>
+    <TextView
+        android:id="@+id/deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kontol"
+        android:textColor="@color/colorGrayText"
+        android:textSize="@dimen/_10sdp"/>
+</LinearLayout>

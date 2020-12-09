@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:left="@dimen/_4sdp" android:top="@dimen/_4sdp">
+                <shape>
+                    <solid android:color="@color/white" />
+                    <corners android:topLeftRadius="@dimen/_18sdp"
+                        android:topRightRadius="@dimen/_18sdp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <!-- SHADOW LAYER -->
+            <item android:left="@dimen/_4sdp" android:right="@dimen/_4sdp" android:top="@dimen/_4sdp">
+                <shape>
+                    <solid android:color="#30000000" />
+                    <corners android:topLeftRadius="@dimen/_18sdp"
+                        android:topRightRadius="@dimen/_18sdp"
+                        android:bottomLeftRadius="@dimen/_5sdp"
+                        android:bottomRightRadius="@dimen/_5sdp"/>
+                </shape>
+            </item>
+            <!-- CONTENT LAYER -->
+            <item android:top="@dimen/_4sdp" android:bottom="@dimen/_4sdp" android:left="@dimen/_4sdp" android:right="@dimen/_4sdp">
+                <shape>
+                    <solid android:color="@color/white" />
+                    <corners android:topLeftRadius="@dimen/_18sdp"
+                        android:topRightRadius="@dimen/_18sdp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:id="@+id/container_main"
+    android:focusableInTouchMode="true"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Deteksi Peribahasa"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/quicksand"
+                    android:textStyle="bold"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/scan_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    app:cardElevation="@dimen/_8sdp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/drawable_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_mic_black_on"
+                            android:layout_centerVertical="true"
+                            app:tint="@color/colorPrimaryDark" />
+                        <TextView
+                            android:id="@+id/text_button"
+                            android:layout_toRightOf="@id/drawable_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rekam"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/colorPrimary"
+                            android:padding="@dimen/_5sdp"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_background_radius_top">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/image_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_80sdp"
+                    app:cardElevation="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:visibility="gone">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:id="@+id/imageView"
+                        android:scaleType="fitCenter"/>
+                </androidx.cardview.widget.CardView>
+                <Button
+                    android:id="@+id/clear_image"
+                    android:layout_below="@id/image_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_75sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="Hapus Gambar"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_below="@id/clear_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pribahasa"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+                <RelativeLayout
+                    android:id="@+id/result_layout"
+                    android:layout_below="@id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_50sdp">
+                    <EditText
+                        android:layout_toLeftOf="@id/speech_button"
+                        android:background="@drawable/edittext_border_radius"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:id="@+id/result_text"
+                        android:textSize="@dimen/_11sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:singleLine="false"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"/>
+                    <ImageView
+                        android:id="@+id/speech_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_sound"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_below="@id/result_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arti Pribahasa"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+
+                <in.myinnos.alphabetsindexfastscrollrecycler.IndexFastScrollRecyclerView
+                    android:id="@+id/recyler_idiom"
+                    android:layout_below="@id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+</LinearLayout>
